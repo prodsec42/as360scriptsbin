@@ -12,10 +12,10 @@ variables:
   maxIssuesAllowed: 100
 
 stages:
-- scan-sast
+- scan-sast-bin
 
 scan-job:
-  stage: scan-sast
+  stage: scan-sast-bin
   script:
     - apt update > /dev/null && apt install curl jq git unzip -y > /dev/null
 
